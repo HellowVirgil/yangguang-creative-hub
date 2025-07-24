@@ -4,10 +4,19 @@ import WorkExperienceSection from "@/components/resume/WorkExperienceSection";
 import ProjectsSection from "@/components/resume/ProjectsSection";
 import PersonalSection from "@/components/resume/PersonalSection";
 import ContactSection from "@/components/resume/ContactSection";
+import TechSkillsSection from "@/components/resume/TechSkillsSection";
+import ParticleBackground from "@/components/effects/ParticleBackground";
+import FloatingSkills from "@/components/effects/FloatingSkills";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* 粒子背景效果 */}
+      <ParticleBackground />
+      
+      {/* 漂浮技能标签 */}
+      <FloatingSkills />
+      
       {/* Header Section */}
       <ResumeHeader />
       
@@ -16,6 +25,9 @@ const Index = () => {
       
       {/* Work Experience Section */}
       <WorkExperienceSection />
+      
+      {/* Tech Skills Section */}
+      <TechSkillsSection />
       
       {/* Projects Section */}
       <ProjectsSection />

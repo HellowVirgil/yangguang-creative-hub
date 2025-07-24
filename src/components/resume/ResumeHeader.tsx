@@ -5,8 +5,31 @@ const ResumeHeader = () => {
     <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-primary opacity-10 animate-pulse-glow"></div>
-      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+      
+      {/* 动态光圈效果 */}
+      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute top-32 right-20 w-48 h-48 bg-accent/15 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
+      <div className="absolute bottom-32 left-32 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
+      
+      {/* 代码雨效果 */}
+      <div className="absolute inset-0">
+        {Array.from({ length: 20 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              fontSize: `${Math.random() * 8 + 8}px`,
+              opacity: 0.1
+            }}
+          >
+            {['React', 'Vue', 'TS', 'JS', 'CSS', 'HTML', '{', '}', '()', '[]', '<>', '&&', '||'][Math.floor(Math.random() * 13)]}
+          </div>
+        ))}
+      </div>
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="mb-8">
