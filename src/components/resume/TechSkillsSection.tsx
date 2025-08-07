@@ -11,8 +11,8 @@ const TechSkillsSection = () => {
         { name: "React", level: 95, years: "5年+" },
         { name: "Vue.js", level: 90, years: "4年+" },
         { name: "TypeScript", level: 88, years: "3年+" },
-        { name: "JavaScript", level: 95, years: "8年+" }
-      ]
+        { name: "JavaScript", level: 95, years: "8年+" },
+      ],
     },
     {
       title: "工程化",
@@ -22,8 +22,8 @@ const TechSkillsSection = () => {
         { name: "Webpack", level: 85, years: "4年+" },
         { name: "Vite", level: 80, years: "2年+" },
         { name: "CI/CD", level: 75, years: "3年+" },
-        { name: "微前端", level: 70, years: "2年+" }
-      ]
+        { name: "微前端", level: 70, years: "2年+" },
+      ],
     },
     {
       title: "后端技术",
@@ -33,8 +33,8 @@ const TechSkillsSection = () => {
         { name: "Node.js", level: 80, years: "4年+" },
         { name: "Express", level: 75, years: "3年+" },
         { name: "MySQL", level: 70, years: "3年+" },
-        { name: "Redis", level: 65, years: "2年+" }
-      ]
+        { name: "K8S", level: 65, years: "1年" },
+      ],
     },
     {
       title: "UI/UX",
@@ -44,8 +44,8 @@ const TechSkillsSection = () => {
         { name: "CSS3", level: 90, years: "8年+" },
         { name: "Sass/Less", level: 85, years: "5年+" },
         { name: "Tailwind CSS", level: 80, years: "2年+" },
-        { name: "Ant Design", level: 85, years: "4年+" }
-      ]
+        { name: "Ant Design", level: 85, years: "4年+" },
+      ],
     },
     {
       title: "性能优化",
@@ -55,8 +55,8 @@ const TechSkillsSection = () => {
         { name: "Bundle优化", level: 85, years: "4年+" },
         { name: "懒加载", level: 80, years: "3年+" },
         { name: "缓存策略", level: 75, years: "3年+" },
-        { name: "性能监控", level: 70, years: "2年+" }
-      ]
+        { name: "性能监控", level: 70, years: "2年+" },
+      ],
     },
     {
       title: "质量保证",
@@ -64,11 +64,11 @@ const TechSkillsSection = () => {
       color: "from-indigo-500 to-purple-500",
       skills: [
         { name: "Jest", level: 80, years: "3年+" },
-        { name: "Cypress", level: 75, years: "2年+" },
+        { name: "Vitest", level: 75, years: "2年+" },
         { name: "ESLint", level: 85, years: "4年+" },
-        { name: "Prettier", level: 85, years: "4年+" }
-      ]
-    }
+        { name: "Prettier", level: 85, years: "4年+" },
+      ],
+    },
   ];
 
   const getSkillLevelColor = (level: number) => {
@@ -82,36 +82,51 @@ const TechSkillsSection = () => {
       <h2 className="text-4xl font-bold text-center mb-16 gradient-text">
         技术能力
       </h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillCategories.map((category, index) => (
-          <Card key={category.title} className="card-glow bg-card/80 backdrop-blur-sm border-border/50">
+          <Card
+            key={category.title}
+            className="card-glow bg-card/80 backdrop-blur-sm border-border/50"
+          >
             <CardHeader>
               <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-full bg-gradient-to-r ${category.color} bg-opacity-20`}>
+                <div
+                  className={`p-3 rounded-full bg-gradient-to-r ${category.color} bg-opacity-20`}
+                >
                   {category.icon}
                 </div>
-                <CardTitle className="text-xl text-foreground">{category.title}</CardTitle>
+                <CardTitle className="text-xl text-foreground">
+                  {category.title}
+                </CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
               {category.skills.map((skill) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-foreground">{skill.name}</span>
+                    <span className="text-sm font-medium text-foreground">
+                      {skill.name}
+                    </span>
                     <div className="flex items-center gap-2">
-                      <span className={`text-xs font-bold ${getSkillLevelColor(skill.level)}`}>
+                      <span
+                        className={`text-xs font-bold ${getSkillLevelColor(
+                          skill.level
+                        )}`}
+                      >
                         {skill.level}%
                       </span>
-                      <span className="text-xs text-muted-foreground">{skill.years}</span>
+                      <span className="text-xs text-muted-foreground">
+                        {skill.years}
+                      </span>
                     </div>
                   </div>
                   <div className="w-full bg-secondary/20 rounded-full h-2 overflow-hidden">
-                    <div 
+                    <div
                       className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 ease-out`}
-                      style={{ 
+                      style={{
                         width: `${skill.level}%`,
-                        animationDelay: `${index * 0.1}s`
+                        animationDelay: `${index * 0.1}s`,
                       }}
                     ></div>
                   </div>
@@ -121,9 +136,9 @@ const TechSkillsSection = () => {
           </Card>
         ))}
       </div>
-      
+
       {/* 技术成就统计 */}
-      <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+      {/* <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
         <Card className="card-glow bg-card/80 backdrop-blur-sm border-border/50 text-center">
           <CardContent className="p-6">
             <div className="text-3xl font-bold text-primary mb-2">20+</div>
@@ -148,7 +163,7 @@ const TechSkillsSection = () => {
             <div className="text-muted-foreground text-sm">系统稳定性</div>
           </CardContent>
         </Card>
-      </div>
+      </div> */}
     </section>
   );
 };

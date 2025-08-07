@@ -13,36 +13,36 @@ const Index = () => {
     <div className="min-h-screen relative">
       {/* 粒子背景效果 */}
       <ParticleBackground />
-      
+
       {/* 漂浮技能标签 */}
       <FloatingSkills />
-      
+
       {/* Header Section */}
       <ResumeHeader />
-      
+
       {/* Education Section */}
       <EducationSection />
-      
+
       {/* Work Experience Section */}
       <WorkExperienceSection />
-      
+
       {/* Tech Skills Section */}
       <TechSkillsSection />
-      
+
       {/* Projects Section */}
       <ProjectsSection />
-      
+
       {/* Personal Section */}
       <PersonalSection />
-      
+
       {/* Contact Section */}
       <ContactSection />
-      
+
       {/* Footer */}
       <footer className="py-12 text-center border-t border-border/20">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-muted-foreground mb-4">
-            © 2024 杨广（云澹）- 用技术创造美好
+            © 2025 杨广 - 用技术创造美好
           </p>
           <p className="text-sm text-muted-foreground">
             Built with React + TypeScript + Tailwind CSS
