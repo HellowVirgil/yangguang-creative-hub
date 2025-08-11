@@ -33,14 +33,14 @@ const ResumeHeader = () => {
           <h1 className="text-7xl md:text-8xl font-bold mb-4 gradient-text animate-fade-in">
             杨广
           </h1>
-          <div
+          {/* <div
             className="text-2xl md:text-3xl text-accent font-medium mb-6 animate-fade-in"
             style={{
               animationDelay: "0.2s",
             }}
           >
             花名：云澹
-          </div>
+          </div> */}
           <p
             className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in"
             style={{
