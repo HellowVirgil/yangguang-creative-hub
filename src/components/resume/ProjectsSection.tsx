@@ -225,67 +225,6 @@ const ProjectsSection = () => {
       techStack: ["Node.js", "Webpack", "Vite", "Lerna", "GitHub Actions"],
       tags: ["工程化", "脚手架", "DevOps", "标准化"],
     },
-    {
-      title: "语雀编辑器增强",
-      period: "蚂蚁时期",
-      icon: <Code2 className="w-6 h-6" />,
-      description:
-        "负责语雀核心编辑器功能，包括数据表编辑器、富文本编辑器等核心模块的设计实现。",
-      highlights: [
-        "自研 Lakex 富文本编辑器",
-        "数据表编辑器，支持类多维表格编辑",
-        "划词评论系统，提升协作体验",
-        "演示模式，支持 PPT 风格的内容展示",
-        "实时协作编辑，支持多人同时编辑",
-        "版本历史和冲突解决机制",
-        "插件化架构，支持功能扩展",
-        "性能优化：虚拟滚动、增量更新、懒渲染",
-      ],
-      techStack: ["React", "Lakex", "TypeScript", "WebSocket", "OPOT"],
-      tags: ["富文本编辑", "实时协作", "性能优化", "架构设计"],
-    },
-    {
-      title: "Weavefox AI 生码平台",
-      period: "蚂蚁时期",
-      icon: <Code2 className="w-6 h-6" />,
-      description:
-        "基于 bailingVL 大模型的 AI 代码生成平台，提供智能化的前端开发解决方案。",
-      highlights: [
-        "大模型集成，支持自然语言转代码",
-        "高阶组件生成，提升开发效率",
-        "意图识别和代码补全",
-        "CodeMirror 业务定制",
-        "支持多种前端框架代码生成",
-        "实时预览和调试功能",
-        "代码版本管理和回滚",
-      ],
-      techStack: ["React", "TypeScript", "CodeMirror Editor", "AI/ML"],
-      tags: ["AI", "代码生成", "大模型", "智能化开发"],
-    },
-    {
-      title: "AIStudio CloudIDE",
-      period: "蚂蚁时期",
-      icon: <Code2 className="w-6 h-6" />,
-      description:
-        "基于 OpenSumi 架构的云原生 IDE，提供完整的云端开发环境，支持集团大模型训练及数据研发场景。",
-      highlights: [
-        "基于 OpenSumi 的插件化架构",
-        "双容器架构设计，前后端分离",
-        "VS Code 兼容的插件生态",
-        "内置 AI 辅助编程插件",
-        "集成调试和测试工具",
-        "性能优化：懒加载、代码分割、缓存策略",
-        "支持多种编程语言和框架",
-      ],
-      techStack: [
-        "OpenSumi",
-        "Monaco Editor",
-        "Node.js",
-        "Docker",
-        "Kubernetes",
-      ],
-      tags: ["CloudIDE", "云原生", "性能优化", "模型训练"],
-    },
   ].reverse();
 
   const getPeriodColor = (period: string) => {
@@ -304,10 +243,10 @@ const ProjectsSection = () => {
   return (
     <section className="py-20 px-6 max-w-6xl mx-auto section-fade-in">
       <h2 className="text-4xl font-bold text-center mb-16 gradient-text">
-        项目经历
+        更多项目
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <Card
             key={project.title}

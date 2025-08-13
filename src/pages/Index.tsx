@@ -7,6 +7,7 @@ import ContactSection from "@/components/resume/ContactSection";
 import TechSkillsSection from "@/components/resume/TechSkillsSection";
 import ParticleBackground from "@/components/effects/ParticleBackground";
 import FloatingSkills from "@/components/effects/FloatingSkills";
+import BusinessSection from "@/components/resume/BusinessSection";
 
 const Index = () => {
   return (
@@ -27,7 +28,10 @@ const Index = () => {
       <WorkExperienceSection />
 
       {/* Tech Skills Section */}
-      <TechSkillsSection />
+      {/* <TechSkillsSection /> */}
+
+      {/* Business Section */}
+      <BusinessSection />
 
       {/* Projects Section */}
       <ProjectsSection />
